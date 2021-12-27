@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useImperativeHandle, useState } from "react";
 import { Button, Layout, Menu, Table, Pagination, Input } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
+import { SearchOutlined, GithubFilled } from "@ant-design/icons";
 
 //axios
 import axios from "axios";
@@ -17,6 +17,8 @@ const Products = () => {
   useEffect(() => {
     getPage(1, 10);
   }, [user]);
+
+  const dispatch = useDispatch();
 
   //Get url
   const baseUrl = "https://face.ox-sys.com/variations";
@@ -94,10 +96,19 @@ const Products = () => {
             <Button
               onClick={() => {
                 localStorage.removeItem("token");
+                dispatch(logout());
               }}
             >
               Log out
             </Button>
+          </Menu.Item>
+          <Menu.Item key={3}>
+            <a
+              href="https://github.com/Khurrambek/ox-group-task"
+              className="font-semibold flex items-center space-x-3"
+            >
+              <GithubFilled className="mr-1" /> Code in GitHub
+            </a>
           </Menu.Item>
         </Menu>
       </Header>

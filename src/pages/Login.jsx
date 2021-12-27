@@ -5,6 +5,7 @@ import {
   EyeInvisibleOutlined,
   EyeTwoTone,
   UserOutlined,
+  GithubFilled,
 } from "@ant-design/icons";
 
 //redux
@@ -88,6 +89,15 @@ const Login = () => {
           </Button>
         </Space>
       </form>
+      <div className="mt-16">
+        <a
+          href="https://github.com/Khurrambek/ox-group-task"
+          className="text-2xl font-semibold flex items-center"
+        >
+          {" "}
+          <GithubFilled className="mr-1" /> Code in GitHub
+        </a>
+      </div>
     </div>
   );
 };

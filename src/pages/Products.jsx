@@ -1,5 +1,5 @@
-import React, { useEffect, useImperativeHandle, useState } from "react";
-import { Button, Layout, Menu, Table, Pagination, Input } from "antd";
+import React, { useEffect, useState } from "react";
+import { Button, Layout, Menu, Pagination, Input } from "antd";
 import { SearchOutlined, GithubFilled } from "@ant-design/icons";
 
 //axios
@@ -7,7 +7,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { logout } from "../reducers/userSlice";
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 const Products = () => {
   //Getting token from redux store

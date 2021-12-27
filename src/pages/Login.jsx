@@ -18,7 +18,6 @@ const baseUrl = "https://face.ox-sys.com/security/auth_check";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
 
   //Get token from storage
   const token = localStorage.getItem("token");
